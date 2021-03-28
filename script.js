@@ -41,7 +41,7 @@ function median(){
         hasilmedian =(data[jumlah/2]+data[(jumlah+1)/2])/2;
       } 
 
-    document.getElementById("mediann").innerHTML = hasilmedian;
+    document.getElementById("median").innerHTML = hasilmedian;
 }
 
 function minmax(){
