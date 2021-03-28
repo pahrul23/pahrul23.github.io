@@ -36,8 +36,8 @@ var tabel = document.getElementById('tabel'),
                 baris.insertCell().appendChild(hapus);
 
             inputKeDatabase({
-                nama: nama.value,
                 nim: nim.value,
+                nama: nama.value,
                 dept: dept.value,
                 email: email.value
             });
