@@ -9,13 +9,9 @@ function InputData(datautama){
 function bubbleSortAsc(data, jumlah){
   for(var i=0; i<jumlah-1; i++){
       for(var j=0; j<jumlah-1; j++){
-        //jika data index x+1 lebih kecil dari data index x
         if(data[j+1]<data[j]){
-          //tampung data index x ke temp
           var temp=data[j];
-          //ubah data index x menjadi data index x+1
           data[j]=data[j+1];
-          //ubah data index x+1 menjadi data temp
           data[j+1]=temp;
         }
       }
