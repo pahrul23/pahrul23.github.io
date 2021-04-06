@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+    dataWolrd()
     dataIndonesia()
     dataFilipina()
     dataSingapura()
@@ -9,7 +10,28 @@ $(document).ready(function(){
     dataLaos()
     dataThailand()
     
+    function dataWolrd(){
+        $.ajax({
+            url : 'https://covid19.mathdro.id/api',
+            success : function(data){
+                try{
+                    var json = data;
+                    var positif = data.confirmed;
+                    var sembuh = data.recovered;
+                    var meninggal = data.deaths;
+                    var lastUpdate = data.lastUpdate;
 
+                    $('#data-positif').html(positif.value);
+                    $('#data-sembuh').html(sembuh.value);
+                    $('#data-meninggal').html(meninggal.value);
+                    $('#last-Update').html(lastUpdate.substring(0,10));
+                }
+                catch{
+                    alert('Error');
+                }
+            }
+        })
+    }
 
     
     function dataIndonesia(){
